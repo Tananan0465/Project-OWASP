@@ -1,0 +1,18 @@
+from subprocess import PIPE, run
+import os
+import time
+
+
+def directoryListing():
+    i=1
+    directoryListingResult = open("directoryListingResult.txt", "w")
+    for line in open("portLists.txt", "r"):
+        os.system("sudo dirsearch -u "+line+" --exclude-status=403,500-599 --recursion-status=200 --exclude-sizes=0B --output=test.txt")
+        i = i+1
+    directoryListingResult.close()
+
+
+
+
+
+directoryListing()
