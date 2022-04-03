@@ -1,18 +1,16 @@
 from subprocess import PIPE, run
 import os
 import time
+import subprocess
 
 
 def directoryListing():
-    i=1
-    directoryListingResult = open("directoryListingResult.txt", "w")
-    for line in open("portLists.txt", "r"):
-        os.system("sudo dirsearch -u "+line+" --exclude-status=403,500-599 --recursion-status=200 --exclude-sizes=0B --output=test.txt")
-        i = i+1
-    directoryListingResult.close()
-
-
-
+    httpInsecureResult = open("httpInsecureResult.txt", "w+")
+    for line in open("portList.txt", "r"):
+        subprocess1 = subprocess.Popen("sudo dirsearch -u "+line+" --exclude-status=403 --recursion-status=200 --exclude-sizes=0B", shell=True, stdout=subprocess.PIPE)
+        subprocess_return = subprocess1.stdout.read()    
+        httpInsecureResult.write(subprocess_return.decode("utf-8"))
+    httpInsecureResult.close()
 
 
 directoryListing()
