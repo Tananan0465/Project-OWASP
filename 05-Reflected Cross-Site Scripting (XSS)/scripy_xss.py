@@ -4,7 +4,7 @@ import time
 import subprocess
 
 def XSS():
-    XSSResult = open("XSSResult.txt", "w+")
+    XSSResult = open("XSSResult.txt", "w")
     for line in open("dnsNoDup.txt", "r"):
         subprocess1 = subprocess.Popen("python xsssniper.py -u '"+line+"' --crawl --forms", shell=True, stdout=subprocess.PIPE)
         subprocess_return = subprocess1.stdout.read()
