@@ -1,0 +1,1 @@
+{'LONG_MAX_AGE': 15552000, 'header': 'max-age=63072000; includeSubDomains; preload', 'status': 'present', 'maxAge': 63072000, 'includeSubDomains': True, 'preload': True, 'directives': {'includesubdomains': '', 'max-age': '63072000', 'preload': ''}}

@@ -1,0 +1,23 @@
+# Dirsearch started Sun Apr 24 04:58:37 2022 as: ./tools/dirsearch/dirsearch.py -u compro.ce.kmitl.ac.th --exclude-status=400-499,500-599 --recursion-status=200 --exclude-sizes=0B --output=./results/directoryListingResult.txt
+
+301   248B   https://compro.ce.kmitl.ac.th:443/dashboard    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/dashboard/
+200     7KB  https://compro.ce.kmitl.ac.th:443/dashboard/
+200    20KB  https://compro.ce.kmitl.ac.th:443/dashboard/faq.html
+200     6KB  https://compro.ce.kmitl.ac.th:443/dashboard/howto.html
+200    86KB  https://compro.ce.kmitl.ac.th:443/dashboard/phpinfo.php
+200    30KB  https://compro.ce.kmitl.ac.th:443/favicon.ico
+301   244B   https://compro.ce.kmitl.ac.th:443/files    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/files/
+200     1KB  https://compro.ce.kmitl.ac.th:443/files/
+301   242B   https://compro.ce.kmitl.ac.th:443/img    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/img/
+302     0B   https://compro.ce.kmitl.ac.th:443/index.php    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/compro21s2/
+302     0B   https://compro.ce.kmitl.ac.th:443/index.php/login/    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/compro21s2/
+301   249B   https://compro.ce.kmitl.ac.th:443/phpmyadmin    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/phpmyadmin/
+200     1KB  https://compro.ce.kmitl.ac.th:443/phpmyadmin/README
+200    15KB  https://compro.ce.kmitl.ac.th:443/phpmyadmin/doc/html/index.html
+200    27KB  https://compro.ce.kmitl.ac.th:443/phpmyadmin/ChangeLog
+200    15KB  https://compro.ce.kmitl.ac.th:443/phpmyadmin/
+200    15KB  https://compro.ce.kmitl.ac.th:443/phpmyadmin/index.php
+301   243B   https://compro.ce.kmitl.ac.th:443/test    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/test/
+200     4KB  https://compro.ce.kmitl.ac.th:443/test/
+301   248B   https://compro.ce.kmitl.ac.th:443/webalizer    -> REDIRECTS TO: https://compro.ce.kmitl.ac.th/webalizer/
+200   681B   https://compro.ce.kmitl.ac.th:443/webalizer/

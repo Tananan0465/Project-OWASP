@@ -1,0 +1,4 @@
+Potentially vulnerable objects found at http://altoro.testfire.net/status_check.jsp
+Potentially vulnerable objects found at http://altoro.testfire.net/swagger/index.html
+Vulnerable webpage: http://altoro.testfire.net/search.jsp
+Vulnerable webpage: http://altoro.testfire.net/index.jsp
