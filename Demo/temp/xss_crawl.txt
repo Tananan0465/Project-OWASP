@@ -1,0 +1,4 @@
+[92m[+][0m Potentially vulnerable objects found at http://altoro.testfire.net/swagger/index.html [0m
+[92m[+][0m Potentially vulnerable objects found at http://altoro.testfire.net/status_check.jsp [0m
+[92m[++][91m Vulnerable webpage: [92mhttp://altoro.testfire.net/index.jsp[0m [0m
+[92m[++][91m Vulnerable webpage: [92mhttp://altoro.testfire.net/search.jsp[0m [0m
