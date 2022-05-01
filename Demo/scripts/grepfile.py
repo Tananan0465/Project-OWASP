@@ -1,4 +1,5 @@
 import os
+from scripts.genDir import genDirName
 
 def grepfile(file):
     r = open(file,"r")
@@ -14,7 +15,8 @@ def grepfile(file):
 
 def formatxss():
     r = open("./temp/xss_crawl.txt","r")
-    f = open("./results/xss_crawl_formated.txt", "w")
+    dirname = open("./temp/url_temp.txt", "r").read()
+    f = open(f"./results/{genDirName(dirname)}/xss_crawl_formated.txt", "w")
     if os.stat("./temp/xss_crawl.txt").st_size == 0:
         f.write("Nothing")
         f.close()

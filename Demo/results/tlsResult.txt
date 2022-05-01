@@ -1,4 +1,0 @@
-{'id': 769, 'name': 'TLS', 'version': '1.0'}
-{'id': 770, 'name': 'TLS', 'version': '1.1'}
-{'id': 771, 'name': 'TLS', 'version': '1.2'}
-{'id': 772, 'name': 'TLS', 'version': '1.3'}
