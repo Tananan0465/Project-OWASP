@@ -1,4 +1,0 @@
-# Nmap 7.92 scan initiated Sun Apr 24 04:59:52 2022 as: nmap -A -sV -iL ./temp/ip.txt -oG output.grep
-Host: 161.246.127.85 ()	Status: Up
-Host: 161.246.127.85 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.43 ((Unix) OpenSSL|1.1.1f PHP|7.4.4 mod_perl|2.0.8-dev Perl|v5.16.3)/, 443/open/tcp//ssl|http//Apache httpd 2.4.43 ((Unix) OpenSSL|1.1.1f PHP|7.4.4 mod_perl|2.0.8-dev Perl|v5.16.3)/, 9090/open/tcp//http//Cockpit web service 162 - 188/	Ignored State: filtered (996)
-# Nmap done at Sun Apr 24 05:00:42 2022 -- 1 IP address (1 host up) scanned in 49.84 seconds

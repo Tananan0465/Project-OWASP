@@ -5,6 +5,8 @@ from scripts.script_scanport import scanport
 from scripts.getip import getipfromhost
 from scripts.script_xss import xssmain
 import socket
+from scripts.genDir import genDir
+import os
 
 state = True
 
@@ -14,28 +16,32 @@ def program():
     print("Command:")
     print("\t-a, --all\t\tTest all command.")
     print("\t-d, --directory\t\tDirectory Listing")
-    print("\t-i, --inject\t\tSQL injection")
     print("\t-p, --portscan\t\tScan open port")
     print("\t-s, --ssl\t\tInsecure SSL/TLS Configuration")
     print("\t-x, --xss\t\tCross-site scripting (XSS)")
-    print("\t--chd\t\t\tChange URL.")
+    print("\t--chu\t\t\tChange URL.")
     print("\t--exit\t\t\tClose program.\n")
 
-    getipfromhost("url.txt")
-    url = "./temp/url_temp.txt"
-    ip = "./temp/ip_temp.txt"
+    if os.stat("url.txt").st_size == 0:
+        print("Please enter URL !!!")
+        command = "--chu"
+    else:
+        getipfromhost("url.txt")
+        url = "./temp/url_temp.txt"
+        ip = "./temp/ip_temp.txt"
+        genDir()
+        command = input("input command: ")
 
-    cmdlist = ['-a', '--all', '-d', '--directory', '-i', '--inject',
-               '-p', '--portscan', '-s', '--ssl', '-x', '--xss', '--chd']
+    cmdlist = ['-a', '--all', '-d', '--directory',
+            '-p', '--portscan', '-s', '--ssl', '-x', '--xss', '--chu']
     closelist = ['--exit']
-    command = input("input command: ")
 
     if command in cmdlist:
         if command == '-a' or command == '--all':
             print("Vulnerability : All")
             scanport(ip)
-            ssl(url)
             xssmain(url)
+            ssl(url)
             directoryListing(url)
             print("Process Completed !!!")
             print("------------------------------")
@@ -43,11 +49,6 @@ def program():
         elif command == '-d' or command == '--directory':
             print("Vulnerability : Directory Listing")
             directoryListing(url)
-
-        elif command == '-i' or command == '--inject':
-            print("Vulnerability : SQL injection")
-            print("SQL Injection Completed")
-            print("------------------------------")
 
         elif command == '-p' or command == '--portscan':
             print("Vulnerability : Scan open port")
@@ -61,11 +62,13 @@ def program():
             print("Vulnerability : Cross-site scripting (XSS)")
             xssmain(url)  # protocol
 
-        elif command == '--chd':
+        elif command == '--chu':
             f = open("url.txt", "w")
             newurl = input("New URL: ")
             f.write(newurl)
             f.close()
+            getipfromhost("url.txt")
+            genDir()
             print("------------------------------")
 
     elif command in closelist:
