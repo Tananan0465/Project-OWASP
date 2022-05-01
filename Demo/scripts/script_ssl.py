@@ -1,10 +1,11 @@
 from subprocess import PIPE, run
 import os
 import json
-
+from scripts.genDir import genDirName
+dirname = open("./temp/url_temp.txt", "r").read()
 
 def hsts():
-    hstsResult = open("./results/hstsResult.txt", "w")
+    hstsResult = open(f"./results/{genDirName(dirname)}/hstsResult.txt", "w")
     temp = open("url.txt", "r").read()
     os.system("curl -s -D- " + temp + " | grep -i strict > ./temp/hsts_read.txt")
     temp = open("./temp/hsts_read.txt", "r").read()
@@ -38,7 +39,7 @@ def ssl(url):
 def tls():
     data = open("./temp/ssl.json", "r").read()
     temp = json.loads(data)[0]
-    tlsResult = open("./results/tlsResult.txt", "w")
+    tlsResult = open(f"./results/{genDirName(dirname)}/tlsResult.txt", "w")
     for i in temp["endpoints"][0]["details"]["protocols"]:
         tlsResult.write(str(i)+"\n")
     tlsResult.close()

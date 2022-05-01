@@ -10,16 +10,16 @@ def getipfromhost(url):
         hostname = hostname[7:]
     if "https://" in hostname:
         hostname = hostname[8:]
-    IPAddr = socket.gethostbyname(hostname)   
-    print("Your Name: " + hostname)    
-    print("Your IP Address: " + IPAddr) 
-    print()
-    ip = open("./temp/ip_temp.txt", "w")
-    ip.write(IPAddr)
-    ip.close()
+    IPAddr = socket.gethostbyname(hostname)
     host = open("./temp/url_temp.txt", "w")
     host.write(hostname)
     host.close()
+    print("URL: " + hostname)   
+    ip = open("./temp/ip_temp.txt", "w")
+    ip.write(IPAddr)
+    ip.close()
+    print("IP Address: " + IPAddr)
+    print()
 
 
     
