@@ -1,1 +1,0 @@
-egrep -v "#|Status: Up" output.grep | cut -d' ' -f2,4- | sed -n -e 's/Ignored.*//p'  | awk '{print $1 ; for(i=2; i<=NF; i++) { a=a""$i; }; split(a,s,","); for(e in s) { split(s[e],v,"/"); printf "%s\n" , v[1]}; a="" ;printf "END\n"}' > ./temp/portList_temp.txt
